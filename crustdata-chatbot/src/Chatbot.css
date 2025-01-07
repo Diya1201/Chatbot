@@ -1,0 +1,170 @@
+/* Centering the chatbot heading */
+.chatbot-heading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the heading */
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffff; /* Aqua color */
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 100; /* Makes sure it's on top */
+  background-color: rgba(255, 255, 255, 0.7); /* Optional: semi-transparent background */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Main chatbot container */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Chatbot logo styles */
+.chatbot-logo img {
+  width: 60px; /* Adjust logo size */
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.chatbot-logo img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Chat window container */
+.chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 450px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+}
+
+.chat-window.open {
+  display: flex;
+}
+
+/* Chat header styles */
+.chat-header {
+  background-color: #00ffff; /* Aqua theme */
+  color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-header h3 {
+  margin: 0;
+}
+
+.chat-header .close-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Chat body styles */
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds spacing between messages */
+}
+
+/* General message styles */
+.message {
+  max-width: 70%; /* Prevents messages from spanning too wide */
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+/* User messages aligned to the right */
+.message.user {
+  background-color: #00ffff; /* Aqua for user */
+  color: black;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Bot messages aligned to the left */
+.message.bot {
+  background-color: #eee; /* Light gray for bot */
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Chat footer styles */
+.chat-footer {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Input field styles */
+.chat-footer input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Send button styles */
+.send-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #00ffff; /* Aqua */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.send-btn:hover {
+  color: #00cccc; /* Slightly darker aqua on hover */
+}
+
+/* Emoji button styles */
+.emoji-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555; /* Neutral gray for emoji button */
+}
+.emoji-btn:hover {
+  color: #333; /* Darker gray on hover */
+}
+/* Emoji picker container */
+.emoji-picker {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: white;
+}
